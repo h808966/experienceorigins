@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporate Wellbeing Program — Experience Origins</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand: #F5EDD8;
+    --deep: #1A1207;
+    --gold: #C89B3C;
+    --gold-light: #E8C56D;
+    --teal: #2D6B6B;
+    --teal-light: #4A9E9E;
+    --rose: #C25A4A;
+    --rose-light: #E8897B;
+    --ink: #2C2416;
+    --mist: #EDE8DC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--sand);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .cover {
+    min-height: 100vh;
+    background: var(--deep);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(200,155,60,0.18) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 80% at 10% 80%, rgba(45,107,107,0.25) 0%, transparent 60%);
+  }
+
+  .cover-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 60px;
+    position: relative;
+  }
+  .cover-label::before {
+    content: '';
+    width: 32px; height: 1px;
+    background: var(--gold);
+  }
+  .cover-main { position: relative; }
+  .cover-eyebrow {
+    color: rgba(245,237,216,0.5);
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 7vw, 96px);
+    font-weight: 900;
+    line-height: 1.0;
+    color: var(--sand);
+    margin-bottom: 32px;
+  }
+  .cover-title em { font-style: normal; color: var(--gold); }
+  .cover-sub {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(245,237,216,0.65);
+    max-width: 560px;
+    margin-bottom: 56px;
+  }
+  .cover-stats { display: flex; gap: 48px; flex-wrap: wrap; }
+  .cover-stat { position: relative; padding-left: 20px; }
+  .cover-stat::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 4px;
+    width: 2px; height: calc(100% - 4px);
+    background: var(--gold);
+  }
+  .cover-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .cover-stat-label {
+    font-size: 11px;
+    color: rgba(245,237,216,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+  }
+  .cover-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgba(245,237,216,0.1);
+    padding-top: 32px;
+    position: relative;
+  }
+  .cover-footer-text {
+    font-size: 11px;
+    color: rgba(245,237,216,0.3);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  section { padding: 100px 60px; max-width: 1200px; margin: 0 auto; }
+
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .section-tag::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--teal);
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 4vw, 60px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: var(--deep);
+  }
+  .section-desc {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #5a4e38;
+    max-width: 620px;
+  }
+
+  .costs-section { background: var(--mist); padding: 100px 0; }
+  .costs-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+  .costs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+    background: rgba(200,155,60,0.15);
+  }
+  .cost-card {
+    background: var(--sand);
+    padding: 44px 36px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  .cost-card:hover { transform: translateY(-6px); z-index: 1; }
+  .cost-icon { width: 48px; height: 48px; margin-bottom: 24px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+  .cost-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--rose);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .cost-unit { font-size: 11px; color: var(--rose); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; font-weight: 500; }
+  .cost-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--deep); margin-bottom: 12px; }
+  .cost-desc { font-size: 14px; line-height: 1.7; color: #6b5c42; }
+
+  .pillars-section { background: var(--deep); padding: 100px 0; }
+  .pillars-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+  .pillars-inner .section-tag { color: var(--gold); }
+  .pillars-inner .section-tag::before { background: var(--gold); }
+  .pillars-inner .section-title { color: var(--sand); }
+  .pillars-inner .section-desc { color: rgba(245,237,216,0.6); }
+  .pillars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 64px; }
+  .pillar-card {
+    border: 1px solid rgba(200,155,60,0.2);
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+  }
+  .pillar-card:hover { border-color: rgba(200,155,60,0.5); }
+  .pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 0;
+    background: var(--gold);
+    transition: height 0.4s ease;
+  }
+  .pillar-card:hover::before { height: 100%; }
+  .pillar-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    color: rgba(200,155,60,0.1);
+    line-height: 1;
+    position: absolute;
+    top: 20px; right: 32px;
+  }
+  .pillar-badge {
+    display: inline-block;
+    background: rgba(200,155,60,0.15);
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  .pillar-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--sand); margin-bottom: 16px; }
+  .pillar-desc { font-size: 14px; line-height: 1.8; color: rgba(245,237,216,0.55); margin-bottom: 28px; }
+  .pillar-initiatives { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .pillar-initiatives li { display: flex; align-items: flex-start; gap: 12px; font-size: 13px; color: rgba(245,237,216,0.7); line-height: 1.5; }
+  .pillar-initiatives li::before { content: '◆'; color: var(--gold); font-size: 7px; margin-top: 4px; flex-shrink: 0; }
+
+  .timeline-section { background: var(--sand); }
+  .timeline { margin-top: 72px; position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 180px;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold), rgba(200,155,60,0.1));
+  }
+  .timeline-item { display: grid; grid-template-columns: 180px 1fr; gap: 0 56px; margin-bottom: 64px; position: relative; }
+  .timeline-period { text-align: right; position: relative; }
+  .timeline-period::after {
+    content: '';
+    position: absolute;
+    right: -8px; top: 8px;
+    width: 14px; height: 14px;
+    background: var(--gold);
+    border-radius: 50%;
+    border: 3px solid var(--sand);
+    box-shadow: 0 0 0 1px var(--gold);
+  }
+  .timeline-phase { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 4px; }
+  .timeline-months { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--deep); }
+  .timeline-content { padding-left: 56px; }
+  .timeline-content-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--deep); margin-bottom: 12px; }
+  .timeline-content-desc { font-size: 14px; line-height: 1.8; color: #6b5c42; margin-bottom: 20px; }
+  .timeline-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .timeline-tag { background: var(--mist); color: var(--teal); font-size: 11px; padding: 5px 14px; border-radius: 2px; font-weight: 500; letter-spacing: 0.5px; }
+
+  .roi-section { background: var(--teal); padding: 100px 0; }
+  .roi-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+  .roi-inner .section-tag { color: var(--gold-light); }
+  .roi-inner .section-tag::before { background: var(--gold-light); }
+  .roi-inner .section-title { color: white; }
+  .roi-inner .section-desc { color: rgba(255,255,255,0.65); }
+  .roi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 64px; align-items: center; }
+  .roi-big-number { text-align: center; padding: 60px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); }
+  .roi-big-number .pre { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+  .roi-big-number .num { font-family: 'Playfair Display', serif; font-size: 120px; font-weight: 900; color: var(--gold-light); line-height: 1; }
+  .roi-big-number .post { font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 16px; line-height: 1.7; }
+  .roi-metrics { display: flex; flex-direction: column; gap: 24px; }
+  .roi-metric { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; padding: 24px 28px; background: rgba(255,255,255,0.06); border-left: 3px solid var(--gold-light); }
+  .roi-metric-val { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--gold-light); white-space: nowrap; }
+  .roi-metric-label { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+
+  .measure-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 60px; background: rgba(200,155,60,0.15); }
+  .measure-card { background: var(--sand); padding: 40px 28px; text-align: center; transition: background 0.3s ease; }
+  .measure-card:hover { background: var(--deep); }
+  .measure-card:hover .measure-title { color: var(--gold); }
+  .measure-card:hover .measure-desc { color: rgba(245,237,216,0.6); }
+  .measure-icon { font-size: 32px; margin-bottom: 16px; }
+  .measure-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--deep); margin-bottom: 10px; transition: color 0.3s; }
+  .measure-desc { font-size: 13px; line-height: 1.6; color: #6b5c42; transition: color 0.3s; }
+
+  .cta-section { background: var(--deep); padding: 100px 60px; text-align: center; position: relative; overflow: hidden; }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(200,155,60,0.1) 0%, transparent 70%);
+  }
+  .cta-section .section-tag { color: var(--gold); justify-content: center; }
+  .cta-section .section-tag::before { background: var(--gold); }
+  .cta-title { font-family: 'Playfair Display', serif; font-size: clamp(36px, 4vw, 64px); font-weight: 900; color: var(--sand); max-width: 800px; margin: 0 auto 32px; line-height: 1.1; position: relative; }
+  .cta-title em { font-style: normal; color: var(--gold); }
+  .cta-sub { font-size: 16px; color: rgba(245,237,216,0.55); max-width: 500px; margin: 0 auto 52px; line-height: 1.8; position: relative; }
+  .cta-pills { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
+  .cta-pill { padding: 14px 32px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; cursor: pointer; }
+  .cta-pill.primary { background: var(--gold); color: var(--deep); }
+  .cta-pill.secondary { background: transparent; color: var(--sand); border: 1px solid rgba(245,237,216,0.25); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .cover-label    { animation: fadeUp 0.8s ease 0.1s both; }
+  .cover-eyebrow  { animation: fadeUp 0.8s ease 0.2s both; }
+  .cover-title    { animation: fadeUp 0.8s ease 0.35s both; }
+  .cover-sub      { animation: fadeUp 0.8s ease 0.5s both; }
+  .cover-stats    { animation: fadeUp 0.8s ease 0.65s both; }
+
+  @media (max-width: 900px) {
+    .costs-grid, .pillars-grid, .roi-grid, .measure-grid { grid-template-columns: 1fr; }
+    section, .costs-inner, .pillars-inner, .roi-inner { padding-left: 28px; padding-right: 28px; }
+    .cover { padding: 40px 28px; }
+    .cta-section { padding: 80px 28px; }
+    .timeline::before { left: 100px; }
+    .timeline-item { grid-template-columns: 100px 1fr; gap: 0 28px; }
+    .timeline-content { padding-left: 28px; }
+  }
+</style>
+</head>
+<body><nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:#1A1207;padding:20px 60px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(200,155,60,0.15);">
+  <a href="experience-origins-home.html" style="display:flex;align-items:center;gap:16px;text-decoration:none;">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wgARCAEcARwDASIAAhEBAxEB/8QAGgABAAMBAQEAAAAAAAAAAAAAAAMEBQECBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAL5YIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAe5yqtCqv6K5dyWsjN17B881ai1VniV00IAAAAAAAAALpbj9WaglhoRag8D1s4mwZfnnKlv5aNOvFqFfL0BkgAAAAAAAFwqfSecYuVYxsY+hwoAX6vSaneogtHv3JmE2jjiajvVTLd4AAAAAJYr5Y9VNAqVPXkAu0vcxNQ5oHnO0c40aVmYjg5AaFO9RAPWjmahHU7MZYAAAAGhn3yeTmcbdOjoEFbtgq3Fww/cno08OS8R+6Fwoz90ihBd4eJac5oQVIDVrx3DCAAAAA18n6MxvAO8Gjm90jJsQSknvucoCzWFixn7KZLtw74QADUy9Qw1ymAAAD2aE/OGe2eGPLYrlhnDeyINQyAoADvLhd5Srpox0pTi3YMzQnFfI0fBRAAABr+8zaMfvkXO0hcrx6JVjuwGengUAB686qeatq0Ve0+F6KsO6Obfpm3syAAAAG3iaZUXqILYiVjliS8ZEV+wY71ZWo7qGVoLiY3q3TNPP86Rnu8GrnaZg8AAAABo52iWaHvVK/qtTLvKY9Wqlood5dLVC7lGjyvpmJdp9JrCmXO0hsY8u2UIvXkywAAAANDPGnLRulaHWyQC1Vu+DnlAXc69VLtO7RNDM96B4pXqIA04LRT7DSAAAAUAADTtYWulHmn6JMy3nnHVLdTZinRk8HHVbGV53YwLs3Rid8qAAAAAAAA9+BtVOTpPVknMtq+TM2K9gx2jys/1qdiKJw8R2MkBQAAAAAAAAAAF6iNmvn6STQZ/k7wUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAgADAAAAIQwwwwwwwwwwwwwwwwwwwwwwwwwxywwwwwwwwwwwwwww1Px6Bwwwwwwwwwwy5fz3zT4zwwwwwwww25//AP8Ar/8A2z+ywwwwwzwt/wBPePtPf8/oMMMMMc8c/wDPvPX73fDDDDDDdfvLP2CCTPf/AL4wwww7/wD+P+IIJbOffe4MMNMc+9+sIIIude908MMMNHf+d88ZJ8dPfOMMMMNdM9/NMsNN+/8AnDDDDDHif/b3rHb/AP51wwwzDDPDXw8R88W8xLDDDPPPPLO4z3xBz/8Azzzzzzzzzzzy4ffzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz/2gAMAwEAAgADAAAAEPfffffffffffffffffffffffffed/ffffffffffffe+7hg0uffffffffffc4Ej60T3hvfffffffYaX284/9536dfffffdV076z8x6t/+j/ffffeXofRR1fR/wD8cb333339e+1+j64ksf8And9997qRNrBe88+pm/C3999tZXbT9288zdvv8w999973vjZp26xDT3r/APfffbbiT488Qz9+/wDb33332vff+dMd/l/9Lj333LLII+td2vf2daJLLLL77765ojOPnfZ/777777777776ys177777777777777777777777777777777777777777777/xAAiEQABBAMAAgIDAAAAAAAAAAABABARMSAhMFFhQVACcYH/2gAIAQIBAT8A+sCgDsICjyxeY0vYrjL12pEADWdvSIAEjIo7eWpiqaEfHGmD1gcvalfxqx9tLUcQdQ9L94h4RMnK2tEqnJ5nW3phlGs51GdPr5RJOuQDHy9KfnnOoUxSlHalSpCJk9QUPyW/rf/EACARAAEEAgIDAQAAAAAAAAAAAAEAESAwITEQQVBRcWH/2gAIAQMBAT8A8XpEp7jlNzjhkPVRzSG1eOSgZiOpNI4oMHaRMPss8aQPUWg8NQK0KnuHqXTWEVFCg0fgrILr7E5QFpDohN43/8QARhAAAgECAwMHCAcGBQQDAAAAAQIDAAQFERITITEUICIyQVFhECMwM1JTcYE0QEJikrHBFTVUcnORQ6Gi0eFEY3CCBiRQ/9oACAEBAAE/Av8AxBa4fLOus5RQ+2+4UvIrfoJDyjvd939qkw9JulYPqPbE3WH+9OpRirggjsP1uKN5X0RKWbuFcgu/4ab8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" style="width:44px;height:44px;object-fit:contain;border-radius:50%;filter:sepia(1) saturate(4) hue-rotate(5deg) brightness(1.2);">
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#F5EDD8;">Experience Origins</div>
+      <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#C89B3C;margin-top:2px;">Kingdom of Saudi Arabia</div>
+    </div>
+  </a>
+  <ul style="display:flex;gap:36px;list-style:none;">
+    <li><a href="experience-origins-home.html" style="color:rgba(245,237,216,0.6);font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;">Home</a></li>
+    <li><a href="experience-origins-wellbeing.html" style="color:#C89B3C;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;">Wellbeing Program</a></li>
+    <li><a href="https://wa.me/966556702244" target="_blank" style="color:rgba(245,237,216,0.6);font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- COVER -->
+<div class="cover" style="padding-top:120px;">
+  
+
+  <div>
+    <!-- Logo + Brand Name -->
+    <div style="display:flex; align-items:center; gap:20px; margin-bottom:60px; position:relative;">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wgARCAEcARwDASIAAhEBAxEB/8QAGgABAAMBAQEAAAAAAAAAAAAAAAMEBQECBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAL5YIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAe5yqtCqv6K5dyWsjN17B881ai1VniV00IAAAAAAAAALpbj9WaglhoRag8D1s4mwZfnnKlv5aNOvFqFfL0BkgAAAAAAAFwqfSecYuVYxsY+hwoAX6vSaneogtHv3JmE2jjiajvVTLd4AAAAAJYr5Y9VNAqVPXkAu0vcxNQ5oHnO0c40aVmYjg5AaFO9RAPWjmahHU7MZYAAAAGhn3yeTmcbdOjoEFbtgq3Fww/cno08OS8R+6Fwoz90ihBd4eJac5oQVIDVrx3DCAAAAA18n6MxvAO8Gjm90jJsQSknvucoCzWFixn7KZLtw74QADUy9Qw1ymAAAD2aE/OGe2eGPLYrlhnDeyINQyAoADvLhd5Srpox0pTi3YMzQnFfI0fBRAAABr+8zaMfvkXO0hcrx6JVjuwGengUAB686qeatq0Ve0+F6KsO6Obfpm3syAAAAG3iaZUXqILYiVjliS8ZEV+wY71ZWo7qGVoLiY3q3TNPP86Rnu8GrnaZg8AAAABo52iWaHvVK/qtTLvKY9Wqlood5dLVC7lGjyvpmJdp9JrCmXO0hsY8u2UIvXkywAAAANDPGnLRulaHWyQC1Vu+DnlAXc69VLtO7RNDM96B4pXqIA04LRT7DSAAAAUAADTtYWulHmn6JMy3nnHVLdTZinRk8HHVbGV53YwLs3Rid8qAAAAAAAA9+BtVOTpPVknMtq+TM2K9gx2jys/1qdiKJw8R2MkBQAAAAAAAAAAF6iNmvn6STQZ/k7wUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAgADAAAAIQwwwwwwwwwwwwwwwwwwwwwwwwwxywwwwwwwwwwwwwww1Px6Bwwwwwwwwwwy5fz3zT4zwwwwwwww25//AP8Ar/8A2z+ywwwwwzwt/wBPePtPf8/oMMMMMc8c/wDPvPX73fDDDDDDdfvLP2CCTPf/AL4wwww7/wD+P+IIJbOffe4MMNMc+9+sIIIude908MMMNHf+d88ZJ8dPfOMMMMNdM9/NMsNN+/8AnDDDDDHif/b3rHb/AP51wwwzDDPDXw8R88W8xLDDDPPPPLO4z3xBz/8Azzzzzzzzzzzy4ffzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz/2gAMAwEAAgADAAAAEPfffffffffffffffffffffffffed/ffffffffffffe+7hg0uffffffffffc4Ej60T3hvfffffffYaX284/9536dfffffdV076z8x6t/+j/ffffeXofRR1fR/wD8cb333339e+1+j64ksf8And9997qRNrBe88+pm/C3999tZXbT9288zdvv8w999973vjZp26xDT3r/APfffbbiT488Qz9+/wDb33332vff+dMd/l/9Lj333LLII+td2vf2daJLLLL77765ojOPnfZ/777777777776ys177777777777777777777777777777777777777777777/xAAiEQABBAMAAgIDAAAAAAAAAAABABARMSAhMFFhQVACcYH/2gAIAQIBAT8A+sCgDsICjyxeY0vYrjL12pEADWdvSIAEjIo7eWpiqaEfHGmD1gcvalfxqx9tLUcQdQ9L94h4RMnK2tEqnJ5nW3phlGs51GdPr5RJOuQDHy9KfnnOoUxSlHalSpCJk9QUPyW/rf/EACARAAEEAgIDAQAAAAAAAAAAAAEAESAwITEQQVBRcWH/2gAIAQMBAT8A8XpEp7jlNzjhkPVRzSG1eOSgZiOpNI4oMHaRMPss8aQPUWg8NQK0KnuHqXTWEVFCg0fgrILr7E5QFpDohN43/8QARhAAAgECAwMHCAcGBQQDAAAAAQIDAAQFERITITEUICIyQVFhECMwM1JTcYE0QEJikrHBFTVUcnORQ6Gi0eFEY3CCBiRQ/9oACAEBAAE/Av8AxBa4fLOus5RQ+2+4UvIrfoJDyjvd939qkw9JulYPqPbE3WH+9OpRirggjsP1uKN5X0RKWbuFcgu/4ab8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" alt="Experience Origins Logo" style="width:56px;height:56px;object-fit:contain;border-radius:50%;background:#1A1207;filter:sepia(1) saturate(4) hue-rotate(5deg) brightness(1.2);">
+
+      <div>
+        <div style="font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:var(--sand); letter-spacing:0.04em; line-height:1;">Experience Origins</div>
+        <div style="font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-top:4px;">Kingdom of Saudi Arabia</div>
+      </div>
+    </div>
+    <div class="cover-main">
+      <div class="cover-eyebrow">Corporate Wellbeing Initiative</div>
+      <h1 class="cover-title">
+        Invest in<br>
+        <em>People.</em><br>
+        Grow the<br>Business.
+      </h1>
+      <p class="cover-sub">
+        A comprehensive mental health and wellbeing program designed for Experience Origins — addressing the true cost of disengagement, burnout, and disconnection with evidence-based interventions.
+      </p>
+      <div class="cover-stats">
+        <div class="cover-stat">
+          <div class="cover-stat-num">6×</div>
+          <div class="cover-stat-label">ROI per SAR spent</div>
+        </div>
+        <div class="cover-stat">
+          <div class="cover-stat-num">126B</div>
+          <div class="cover-stat-label">SAR annual KSA loss</div>
+        </div>
+        <div class="cover-stat">
+          <div class="cover-stat-num">12%</div>
+          <div class="cover-stat-label">Profit lost to disconnection</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cover-footer">
+    <div class="cover-footer-text">Experience Origins · Confidential Strategic Document</div>
+    <div class="cover-footer-text">Version 1.0</div>
+  </div>
+</div>
+
+
+<!-- THE PROBLEM -->
+<div class="costs-section">
+  <div class="costs-inner">
+    <div class="section-tag">The Problem</div>
+    <h2 class="section-title">What poor wellbeing<br>is costing your organisation</h2>
+    <p class="section-desc">Each of these challenges represents a measurable, avoidable drain on your people and bottom line — and each has a proven solution.</p>
+    <div class="costs-grid">
+      <div class="cost-card">
+        <div class="cost-amount">18%</div>
+        <div class="cost-unit">Of Employee's Salary</div>
+        <div class="cost-title">Depression & Disengagement</div>
+        <p class="cost-desc">Disengaged employees cost the equivalent of 18% of their annual salary. Depression impairs executive function, accelerating cognitive decline and long-term productivity loss.</p>
+      </div>
+      <div class="cost-card">
+        <div class="cost-amount">−12%</div>
+        <div class="cost-unit">Annual Profit Reduction</div>
+        <div class="cost-title">Workplace Disconnection</div>
+        <p class="cost-desc">Disconnected colleagues cost 12% in potential profit. By contrast, organisations with strong workplace connections report 36% fewer safety incidents and 7% more engaged customers.</p>
+      </div>
+      <div class="cost-card">
+        <div class="cost-amount">15,000</div>
+        <div class="cost-unit">SAR · Per Smoker Annually</div>
+        <div class="cost-title">Stress-Driven Smoking</div>
+        <p class="cost-desc">Smokers average 31% higher sick leave. Smoking at work is typically stress-triggered, and long-term smoking compounds mental health challenges, increasing depression and anxiety.</p>
+      </div>
+      <div class="cost-card">
+        <div class="cost-amount">~3,000</div>
+        <div class="cost-unit">SAR · Per Employee / Year</div>
+        <div class="cost-title">Sleep Deprivation</div>
+        <p class="cost-desc">Stress-induced poor sleep costs organisations SAR 2,500–3,156 per employee annually. Sleep-deprived workers miss an extra 5 days of work per year.</p>
+      </div>
+      <div class="cost-card">
+        <div class="cost-amount">20–30%</div>
+        <div class="cost-unit">Of Annual Salary · Per Departure</div>
+        <div class="cost-title">Avoidable Turnover</div>
+        <p class="cost-desc">Recruiting, hiring, and training a replacement costs 20–30% of the departing employee's annual salary. Burnout and unaddressed mental health are key drivers.</p>
+      </div>
+      <div class="cost-card" style="background: var(--deep);">
+        <div class="cost-amount" style="color:var(--gold-light)">$3–$6</div>
+        <div class="cost-unit" style="color:var(--gold)">Return per $1 Invested</div>
+        <div class="cost-title" style="color:var(--sand)">The Opportunity</div>
+        <p class="cost-desc" style="color:rgba(245,237,216,0.6)">Every riyal invested in mental health programs returns between 3 and 6 riyals in reduced absenteeism, lower turnover, and improved productivity.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- PROGRAM PILLARS -->
+<div class="pillars-section">
+  <div class="pillars-inner">
+    <div class="section-tag">Program Architecture</div>
+    <h2 class="section-title">Five Pillars of the<br>Wellbeing Program</h2>
+    <p class="section-desc">An integrated, culturally sensitive framework built for the KSA workplace, addressing each identified cost driver with evidence-based interventions.</p>
+    <div class="pillars-grid">
+
+      <div class="pillar-card">
+        <div class="pillar-num">01</div>
+        <div class="pillar-badge">Mental Health & Resilience</div>
+        <div class="pillar-title">Mind First</div>
+        <p class="pillar-desc">Tackle depression, anxiety, and burnout head-on with structured support, destigmatising mental healthcare in the workplace.</p>
+        <ul class="pillar-initiatives">
+          <li>Confidential Employee Assistance Programme (EAP) with licensed counsellors</li>
+          <li>Stress management workshops and resilience training</li>
+          <li>Manager Mental Health First Aid certification</li>
+          <li>Anonymous mental health check-in platform (Arabic & English)</li>
+          <li>Mindfulness and guided meditation sessions</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">02</div>
+        <div class="pillar-badge">Connection & Belonging</div>
+        <div class="pillar-title">Together at Work</div>
+        <p class="pillar-desc">Rebuild workplace connections that drive the 36% reduction in safety incidents and 12% profit uplift seen in highly connected teams.</p>
+        <ul class="pillar-initiatives">
+          <li>Structured peer connection programme and buddy system</li>
+          <li>Cross-department collaboration challenges and team activities</li>
+          <li>Community volunteering days aligned with KSA Vision 2030</li>
+          <li>Social clubs (sports, reading, cultural) with company support</li>
+          <li>Regular pulse surveys to track belonging and connection scores</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">03</div>
+        <div class="pillar-badge">Physical Health & Lifestyle</div>
+        <div class="pillar-title">Body in Balance</div>
+        <p class="pillar-desc">Address smoking, poor sleep, and sedentary behaviour — the physical manifestations of workplace stress — reducing absenteeism and healthcare costs.</p>
+        <ul class="pillar-initiatives">
+          <li>Smoking cessation programme with pharmacist support and NRT</li>
+          <li>Sleep hygiene workshops and access to sleep tracking resources</li>
+          <li>On-site or subsidised gym membership and fitness classes</li>
+          <li>Healthy subsidised canteen options aligned with Saudi dietary culture</li>
+          <li>Step challenge app with team leaderboards and rewards</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">04</div>
+        <div class="pillar-badge">Leadership & Culture</div>
+        <div class="pillar-title">Lead with Care</div>
+        <p class="pillar-desc">Wellbeing must be modelled from the top. Leaders who demonstrate healthy habits and psychological safety create the conditions where programmes succeed.</p>
+        <ul class="pillar-initiatives">
+          <li>Executive wellbeing coaching and leadership development</li>
+          <li>Psychological safety training for all managers</li>
+          <li>Wellbeing KPIs included in leadership performance reviews</li>
+          <li>Open-door policy frameworks and skip-level feedback mechanisms</li>
+          <li>Anti-burnout workload audits conducted quarterly</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card" style="grid-column: 1 / -1;">
+        <div class="pillar-num">05</div>
+        <div class="pillar-badge">Financial Wellbeing</div>
+        <div class="pillar-title">Security & Stability</div>
+        <p class="pillar-desc">Financial stress is a leading driver of anxiety and disengagement. Supporting employees' financial literacy and stability reduces mental load and turnover risk.</p>
+        <ul class="pillar-initiatives" style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <li>Financial literacy workshops and savings goal coaching</li>
+          <li>Emergency salary advance scheme (no-interest)</li>
+          <li>Retirement and investment planning seminars</li>
+          <li>Discount partnerships with local businesses and services</li>
+          <li>Benefits review ensuring competitive total compensation</li>
+          <li>Transparent pay-band communication to reduce anxiety</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- IMPLEMENTATION TIMELINE -->
+<section class="timeline-section">
+  <div class="section-tag">Rollout Plan</div>
+  <h2 class="section-title">12-Month<br>Implementation Roadmap</h2>
+  <p class="section-desc">A phased approach ensures each pillar is embedded thoughtfully, building organisational capacity and culture before scaling.</p>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-period">
+        <div class="timeline-phase">Phase 1</div>
+        <div class="timeline-months">M 1–2</div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-content-title">Foundation & Diagnosis</div>
+        <p class="timeline-content-desc">Conduct a baseline wellbeing audit across the organisation. Identify highest-risk teams, assess existing benefits, and establish the Wellbeing Committee. Communicate the programme vision to all employees with senior leadership endorsement.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Wellbeing Survey</span>
+          <span class="timeline-tag">Committee Formation</span>
+          <span class="timeline-tag">Vendor Selection</span>
+          <span class="timeline-tag">Leadership Buy-in</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-period">
+        <div class="timeline-phase">Phase 2</div>
+        <div class="timeline-months">M 3–4</div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-content-title">Mental Health Infrastructure</div>
+        <p class="timeline-content-desc">Launch the Employee Assistance Programme and mental health first aid training for managers. Introduce the anonymous check-in platform and run the first company-wide Mental Health Awareness Month campaign.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">EAP Launch</span>
+          <span class="timeline-tag">Manager Training</span>
+          <span class="timeline-tag">Check-in Platform</span>
+          <span class="timeline-tag">Awareness Campaign</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-period">
+        <div class="timeline-phase">Phase 3</div>
+        <div class="timeline-months">M 5–6</div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-content-title">Physical & Social Activation</div>
+        <p class="timeline-content-desc">Roll out smoking cessation programme, fitness partnerships, and the step challenge app. Launch the peer connection programme and first round of social clubs. Introduce the financial literacy workshop series.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Smoking Cessation</span>
+          <span class="timeline-tag">Fitness Partnerships</span>
+          <span class="timeline-tag">Peer Buddies</span>
+          <span class="timeline-tag">Financial Literacy</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-period">
+        <div class="timeline-phase">Phase 4</div>
+        <div class="timeline-months">M 7–9</div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-content-title">Deepening & Embedding</div>
+        <p class="timeline-content-desc">Integrate wellbeing KPIs into leadership performance reviews. Conduct workload audits in highest-stress teams. Run mid-year engagement survey and adjust the programme based on data. Celebrate early wins publicly.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Wellbeing KPIs</span>
+          <span class="timeline-tag">Workload Audits</span>
+          <span class="timeline-tag">Mid-Year Survey</span>
+          <span class="timeline-tag">Programme Refinement</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-period">
+        <div class="timeline-phase">Phase 5</div>
+        <div class="timeline-months">M 10–12</div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-content-title">Measure, Report & Scale</div>
+        <p class="timeline-content-desc">Compile full-year ROI report comparing baseline metrics. Present findings to board. Plan Year 2 expansion including additional services, family wellbeing benefits, and potential industry benchmarking with other KSA organisations.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">ROI Report</span>
+          <span class="timeline-tag">Board Presentation</span>
+          <span class="timeline-tag">Year 2 Planning</span>
+          <span class="timeline-tag">Benchmarking</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ROI SECTION -->
+<div class="roi-section">
+  <div class="roi-inner">
+    <div class="section-tag">Return on Investment</div>
+    <h2 class="section-title">The business case<br>is undeniable</h2>
+    <p class="section-desc">Evidence from global and regional studies consistently shows that structured wellbeing investment delivers substantial, measurable returns.</p>
+    <div class="roi-grid">
+      <div class="roi-big-number">
+        <div class="pre">For every 1 SAR invested</div>
+        <div class="num">6×</div>
+        <div class="post">average return through reduced absenteeism,<br>lower turnover, and higher productivity</div>
+      </div>
+      <div class="roi-metrics">
+        <div class="roi-metric">
+          <div class="roi-metric-val">−36%</div>
+          <div class="roi-metric-label">Safety incidents in highly connected organisations</div>
+        </div>
+        <div class="roi-metric">
+          <div class="roi-metric-val">−31%</div>
+          <div class="roi-metric-label">Sick leave reduction from smoking cessation</div>
+        </div>
+        <div class="roi-metric">
+          <div class="roi-metric-val">+12%</div>
+          <div class="roi-metric-label">Profit uplift when colleagues feel connected</div>
+        </div>
+        <div class="roi-metric">
+          <div class="roi-metric-val">+7%</div>
+          <div class="roi-metric-label">More engaged customers in wellbeing-led companies</div>
+        </div>
+        <div class="roi-metric">
+          <div class="roi-metric-val">5 days</div>
+          <div class="roi-metric-label">Extra absence per year from untreated poor sleep</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- MEASUREMENT -->
+<section>
+  <div class="section-tag">Success Metrics</div>
+  <h2 class="section-title">How we measure<br>what matters</h2>
+  <p class="section-desc">Every pillar has clear, trackable outcomes. Quarterly reporting keeps the programme accountable and enables continuous improvement.</p>
+  <div class="measure-grid">
+    <div class="measure-card">
+      
+      <div class="measure-title">Engagement Score</div>
+      <p class="measure-desc">Bi-annual engagement survey tracking connection, purpose, and satisfaction across all teams.</p>
+    </div>
+    <div class="measure-card">
+      
+      <div class="measure-title">Absenteeism Rate</div>
+      <p class="measure-desc">Monthly tracking of sick days per employee, segmented by team, role, and risk profile.</p>
+    </div>
+    <div class="measure-card">
+      
+      <div class="measure-title">Retention & Turnover</div>
+      <p class="measure-desc">Quarterly voluntary turnover rate and exit interview sentiment analysis.</p>
+    </div>
+    <div class="measure-card">
+      
+      <div class="measure-title">EAP Utilisation</div>
+      <p class="measure-desc">Anonymous tracking of EAP sessions, topics, and outcomes to calibrate support levels.</p>
+    </div>
+    <div class="measure-card">
+      
+      <div class="measure-title">Physical Health KPIs</div>
+      <p class="measure-desc">Smoking cessation rates, gym participation, step challenge engagement, and BMI trends.</p>
+    </div>
+    <div class="measure-card">
+      
+      <div class="measure-title">Connection Index</div>
+      <p class="measure-desc">Pulse survey metric measuring whether employees have at least one close connection at work.</p>
+    </div>
+    <div class="measure-card">
+      
+      <div class="measure-title">Financial Wellbeing</div>
+      <p class="measure-desc">Anonymised tracking of advance scheme usage and workshop participation rates.</p>
+    </div>
+    <div class="measure-card">
+      
+      <div class="measure-title">Programme ROI</div>
+      <p class="measure-desc">Annual cost-benefit analysis comparing investment against measurable savings in turnover, absence, and productivity.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="section-tag" style="justify-content:center">Next Steps</div>
+  <h2 class="cta-title">
+    Your people are your<br>greatest <em>asset.</em><br>Treat them that way.
+  </h2>
+  <p class="cta-sub">
+    The evidence from KSA and around the world is clear: organisations that invest in wellbeing outperform those that don't — in every metric that matters.
+  </p>
+  <div class="cta-pills">
+    <a href="https://wa.me/966530485492" target="_blank"><div class="cta-pill primary">Schedule a Program Review</div></a>
+    <div class="cta-pill secondary">Download Full Report</div>
+  </div>
+
+  </div>
+</div>
+
+</body>
+</html>
